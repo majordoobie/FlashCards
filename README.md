@@ -13,7 +13,7 @@ python MyFlashCards.py -i {file you want to pull from}
 Text file:
 The program is limited to simple text files as it cannot read wrapped text as of yet. 
 
-Format:
 
+Format:
 Q: How old are you
 A: 99 years old
