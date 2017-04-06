@@ -113,7 +113,7 @@ def main():
 		sys.exit()
 	else:
 		try:
-			opts, args = getopt.getopt(sys.argv[1:],'h:i:')  #fucking colon is important, fuck.
+			opts, args = getopt.getopt(sys.argv[1:],'hi:', ["help"])  #fucking colon is important, fuck.
 		except getopt.GetoptError:
 			usage()
 			sys.exit(2)
