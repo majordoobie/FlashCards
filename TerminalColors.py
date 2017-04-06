@@ -1,3 +1,11 @@
+"""
+Class that stores variables to change printed strings.
+These variables used ANSI modification codes
+
+Usage:
+from TerminalColors import TerminalColors as tc
+print(tc.GREEN + "fuck" + tc.ENDC)
+"""
 class TerminalColors():
 
 	#End of modified text
