@@ -1,0 +1,59 @@
+Q: What is the regulation that covers the Opeerations Process?
+A: ADP 5-0
+
+Q: What is the Army's framwork for exercising mission command?
+A: The operations process
+
+Q: What are the 4 steps of the operations process?
+A: Planning, Preparing, Executing, and Assessing.
+ 
+Q: What are the phases of intelligence preparation of batterfield process?
+A: 
+Define the operation environment.
+Describe environment effects on operations.
+Evaluate the threat.
+Determine threat courses of action.
+
+Q: What is the Operational Environment?
+A: The operational Environment refers to influences that affect the employment of capabilities and bear on the decisions of the commander.
+
+Q: What are the principles of the operations process?
+A:
+Commanders drive the operations process
+Build and mantain situational understanding
+Apply critical and creative thinking
+Encourage collaboration and dialogue
+
+Q: What is the difference between a Commander Critical information requirement (CCIR) and an Essential Elements of Friendly Information(EEFI)?
+A: CCIR focus information collection on the relevant information a commander needs to make critical decisions througout the conduct of operations. EEFIs identify those elements of friendly information that, if compromised, would jeopardize mission success. 
+
+Q: What are the operational variables?
+A:
+Political
+Military
+Economical
+Social
+Infrastructure
+Information
+Physical Environment
+Time
+
+Q: What are the mission Variables?
+A:
+METT-TC
+Mission
+Enemy
+Terrain and weather
+Troops available
+Time available
+Civil considerations
+
+Q: What are the 8 troop leading prcedures (TLPs)
+A: 
+Reveice the mission
+Issue a WARNO
+Make a tentative plan
+Initiate movement
+Conduct reconnaissance
+Complete the planjIssue the final order
+supervice and refine

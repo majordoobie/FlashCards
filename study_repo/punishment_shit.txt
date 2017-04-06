@@ -1,0 +1,30 @@
+1700    ASU w/ weather coat @ Darling hall
+   33.4241817, -82.1363715
+
+1730    Full winter PTs @ 1/4 mile track
+
+1800    Acu w/ camepack @ Combat medical training
+    33.430152, -82.125895
+
+1830    civilian @ army welness center
+    33.422609, -82.141306
+
+1900    Summer pts 1/2 mile track   
+    33.407588, -82.133034
+
+1930    Class Bs @ NCO academy 
+    33.416237, -82.153133
+
+2000    acu vest helmet gloves safety glasses  @ range control 
+    33.406821, -82.178690
+
+2030    Downgraded winter pt'safety @ topham
+    33.424333, -82.182177
+
+2100    acu rain gear @ visitor center gate 1
+
+2130    civilian business @ SFL-TAP center 
+    33.424201, -82.137988
+
+2200    Winter PT no jacket @ u-do-it
+    33.411848, -82.125451
