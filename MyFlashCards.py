@@ -2,22 +2,26 @@
 
 import sys
 import getopt
-import os
-import subprocess
-import platform
+from os import get_terminal_size
+from subprocess import call
+from platform import system
 from TerminalColors import TerminalColors as tc
 
 
 
 
 def console():
-	ts = os.get_terminal_size()
+	ts = get_terminal_size()
 	return ts.columns 
 
 def askQuestion(q, ts):
 	ts = console()
+	qvar = "Question:"
+	print(tc.GREEN + tc.BOLD + tc.UNDERLINE + "{}".format(qvar.center(ts)) + tc.ENDC)
 	print(tc.GREEN + "{}".format(q.center(ts)) + tc.ENDC)
-	variable = input('Press enter to reveal your answer.\nPress q to exit:\n')
+	print('\n')
+	variable = input(tc.RED + tc.ITALIC + 'Press Enter to reveal your answer.\nPress'\
+					' q + Enter to exit:\n' + tc.ENDC)
 	if variable in ('q', 'Q'):
 		sys.exit()
 	else:
@@ -26,20 +30,24 @@ def askQuestion(q, ts):
 
 def tellAnswer(a, ts):
 	ts = console()
+	avar = "Answer:"
+	print(tc.BLUE + tc.BOLD + tc.UNDERLINE + "{}".format(avar.center(ts)) + tc.ENDC)
 	print(tc.BLUE + "{}".format(a.center(ts)) + tc.ENDC)
-	variable = input('Press enter to get next question.\nPress q to exit:\n')
+	print('\n')
+	variable = input(tc.RED + tc.ITALIC + 'Press Enter to get next question.\nPress'\
+					' q + Enter to exit:\n' + tc.ENDC)
 	if variable in ('q', 'Q'):
 		sys.exit()
 	else:
 		pass 
-	subprocess.call("cls" if platform.system()=="Windows" else "clear")
+	call("cls" if system()=="Windows" else "clear")
 	return
 	
 #PROGRAM HANGSOUT HERE ITERATING THROUGH YOUR STUDY MATERIAL
 def game(dictDeck):
 	while 1:
-		ts = os.get_terminal_size()
-		subprocess.call("cls" if platform.system()=="Windows" else "clear")
+		ts = get_terminal_size()
+		call("cls" if system()=="Windows" else "clear")
 		for q, a in dictDeck.items():
 			askQuestion(q, ts)
 			tellAnswer(a, ts)
@@ -52,10 +60,17 @@ def parse(inputfile):
 		contents=[]
 		with open(inputfile, 'r') as infile:
 		    for line in infile:
-		        contents.append(line.rstrip())
+		    	if not line.rstrip().startswith('#'):  #added the ignore comment feature
+		        	contents.append(line.rstrip())
+
+#This will fix the issue with some files not working because of white
+#space at the end and or front after comments
+		while contents[0] =='':
+			del contents[0]
+		while contents[-1] == '':
+			del contents[-1]
 #this will enumerate our contents list to find the spaces or new lines
 #which is how we are seperating our questions and answers
-		print('hi')
 		spaces = [ i for i,x in enumerate(contents) if x == '' ]
 #now remove those blank spaces
 		for i in reversed(spaces):
@@ -82,27 +97,13 @@ def parse(inputfile):
 		msg = "Sorry, the file " + '"' +inputfile+'"'+ " does not exist."
 		print(msg)
 		sys.exit()
-"""
-#PARSES THROUGH THE FILE TO CREATE A DICT OF Q AND A
-def parse(inputfile):
-	if os.path.isfile(inputfile) == True:
-		file = open(inputfile, 'r') 
-		stack = {}
-		for line in file: 
-			if line.startswith('Q'):
-				question = line.rstrip() 
-			elif line.startswith('A'):
-				answer = line.rstrip() 
-				stack[question] = answer	
-		game(stack)
-	else:
-		print('foolish human, file does not exit.')
-		sys.exit()
-"""
+
 #TELLS USER WHAT TO DO
 def usage():
+	print('\n')
 	print("Use -i to give the location of the input file to read from.")
 	print("Example: python MyFlashCards.py -i studylist.txt")
+	print('\n')
 	return
 	
 #ESTABLISH WHAT FILE TO READ
