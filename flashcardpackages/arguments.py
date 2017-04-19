@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
-
-
-
+"""
+Argument templete used to replace opts
+"""
 def argvParser(arguments):
 	
 	helpList = ['-h', '--help']
