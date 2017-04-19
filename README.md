@@ -2,18 +2,16 @@ MyFlashCards.py
 ===============
 
 
-This program is used to help you study, it will pull from any file that you give it and display to you
-the question, with a press of enter you can reveal the answer to that question.
+Description:
+  This is a flash card program used to help you study by displaying a question then 
+  revealing the answer when you're ready to reveal it. Think of it as a deck of 
+  flash cards, with questions on one side and answers on the other side.
 
-Usage: 
-python MyFlashCards.py -i {file you want to pull from}
+  To start studying simply call the program with the -i option and give it the 
+  full path of your file that you're using to study from.
+
+  Keep in mind that the parser uses blank lines as it's delimiter between questions
+  and answers. If you have too many lines in between or not enough it will mess up
+  the order of your deck.
 
 
-
-Text file:
-The program is limited to simple text files as it cannot read wrapped text as of yet. 
-
-
-Format:
-Q: How old are you
-A: 99 years old
