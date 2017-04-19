@@ -82,6 +82,18 @@ def fileParser(inputfile):
 #this will enumerate our contents list to find the spaces or new lines
 #which is how we are seperating our questions and answers
 		spaces = [ i for i,x in enumerate(contents) if x == '' ]
+#sanity check
+#make sure the user doesn't have extra spaces in their text file
+		for i in range(len(spaces) - 1):
+			if spaces[i] + 1 == spaces[i+1]:
+				msg="""
+Sorry, program found extra spaces in your "{}" file on line number {}.
+Please remove extra line(s) to continue. 
+				"""
+				print(msg.format(inputfile, i))
+				sys.exit()
+			else:
+				continue
 #now remove those blank spaces
 		for i in reversed(spaces):
 		    del contents[i]
