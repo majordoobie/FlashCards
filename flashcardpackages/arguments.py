@@ -17,5 +17,5 @@ def argvParser(arguments):
 		return argvDict
 
 	else:
-		print('usage')
+		return 
 
